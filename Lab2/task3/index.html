@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="microsoft" width="7.4%">
+    <div class="header" id="head">
+        <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="microsoft" width="8%">
         <div class="lll">
             <span><button  class="header-button">Microsoft 365</button></span>
             <span><button  class="header-button">Office</button></span>
@@ -17,8 +17,10 @@
         </div>
         <div class="rrr">
             <span><button  class="header-button">Продукты Майкросовт</button></span>
-            <span><button href="#" class="header-button"> Поиск</button></span>
+            <span><button href="#" class="header-button"> Поиск </button></span>
+            <img src="img/lupa.png" alt="" style="width: 5%;">
             <span><button href="#" class="header-button">Войти</button></span>
+            <img src="img/chel.png" alt="" width="8%">
         </div>
     </div>
     <div class="image-container">
@@ -31,46 +33,99 @@
     </div>
     <div class="buttons">
         <button class="left-button">&#x2B05;</button>
-        <button class="stop-button">&#x25A0;</button>
+        <button class="stop-button">&#10074; &#10074;</button>
         <button class="right-button">&#x27A1;</button>
     </div>
     <div class="carusel">
         <div>
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?wid=380&hei=213&fit=crop" alt="photo1" class="imgs-carusel">
-            <h3>Microsoft Edge</h3>
-            <p>Потрясающая производительность,<br> больше конфиденциальности,<br> продуктивности и дополнительных<br> возможностей.</p>
-            <a href="#">Скачать</a>
+            <h3 class="carusel-header">Microsoft Edge</h3>
+            <p class="carusel-p">Потрясающая производительность,<br> больше конфиденциальности,<br> продуктивности и дополнительных<br> возможностей.</p>
+            <a href="#" class="carusel-b">Скачать</a>
             <button class="right-button">&#x27A4;</button>
         </div>
         <div>
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?wid=380&hei=213&fit=crop" alt="photo2" class="imgs-carusel">
-            <h3>Microsoft OneDrive</h3>
-            <p>Сохраняйте свои файлы и фотографии на<br> OneDrive — они будут доступны с любого<br> устройства и где угодно.</p>
-            <a href="#">Подробнее</a>
+            <h3 class="carusel-header">Microsoft OneDrive</h3>
+            <p class="carusel-p">Сохраняйте свои файлы и фотографии на<br> OneDrive — они будут доступны с любого<br> устройства и где угодно.</p>
+            <a href="#" class="carusel-b">Подробнее</a>
             <button class="right-button">&#x27A4;</button>
         </div>
         <div>
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-PC-SMB-OneNote?wid=380&hei=213&fit=crop" alt="photo3" class="imgs-carusel">
-            <h3>OneNote</h3>
-            <p>Приведите свои заметки и дела в порядок.</p>
-            <a href="#">Узнать больше</a>
+            <h3 class="carusel-header">OneNote</h3>
+            <p class="carusel-p">Приведите свои заметки и дела в порядок.</p>
+            <a href="#" class="carusel-b">Узнать больше</a>
             <button class="right-button">&#x27A4;</button>
         </div>
         <div>
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-MSCOM-Outlook-iOS-Android?wid=380&hei=213&fit=crop" alt="photo4" class="imgs-carusel">
-            <h3>Outlook для iOS и <br>Android</h3>
-            <p>Будьте на связи. Организовывайте. Успевайте больше.</p>
-            <a href="#">Скачать</a>
+            <h3 class="carusel-header">Outlook для iOS и <br>Android</h3>
+            <p class="carusel-p">Будьте на связи. Организовывайте. Успевайте больше.</p>
+            <a href="#" class="carusel-b">Скачать</a>
             <button class="right-button">&#x27A4;</button>
         </div>
     </div>
     <div class="image-container2">
+        <a href="#head" class="back-to-top" id="back-to-top">▴Назад наверх</a>
         <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero-Highlight-Teams-Floating-UI:VP5-1596x600" alt="big2" width="95%">
             <div class="overlay2">
                 <h1>Больше общения с <br>близкими</h1>
                 <p>Общайтесь, созванивайтесь и составляйте планы с<br> семьей и друзьями в Microsoft Teams</p>
                 <button class="check-button">Подробнее</button>
             </div>
+    </div>
+    <div>
+        <h1 style="margin-left: 5%; margin-top: 4%; margin-bottom: -4%; font-size: 240%;">Для бизнеса</h1>
+        <div class="carusel">
+            <div>
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Visual-Studio-Icon?wid=380&hei=213&fit=crop" alt="photo5" class="imgs-carusel">
+                <h3 class="carusel-header">Visual Studio 2022</h3>
+                <p class="carusel-p">Наиболее комплексная среда IDE для<br>
+                    разработчиков .NET и C++ на Windows для<br>
+                    создания веб-приложений, приложений<br>
+                    для ПК, облачных и мобильных<br>
+                    приложений, а также служб и игр.
+                </p>
+                <a href="#" class="carusel-b">Скачайте Visual Studio 2022</a>
+                <button class="right-button">&#x27A4;</button>
+            </div>
+            <div>
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/JIC-DPS-CP01?wid=380&hei=213&fit=crop" alt="photo6" class="imgs-carusel">
+                <h3 class="carusel-header">Добро пожаловать в <br> Windows 365 Cloud PC</h3>
+                <p class="carusel-p"> 
+                    Работать с Windows в облаке Microsoft <br>
+                    теперь можно на любых устройствах.
+                </p>
+                <a href="#" class="carusel-b">Попробуйте прямо сейчас</a>
+                <button class="right-button">&#x27A4;</button>
+            </div>
+            <div>
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Apps-CP-EdgeBingLifeStyle?wid=380&hei=213&fit=crop" alt="photo7" class="imgs-carusel">
+                <h3 class="carusel-header">Microsoft Edge</h3>
+                <p class="carusel-p">
+                    Производительность, совместимость,<br>
+                    безопасность. Браузер для бизнеса.
+                </p>
+                <a href="#" class="carusel-b">Скачать</a>
+                <button class="right-button">&#x27A4;</button>
+            </div>
+            <div>
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Brand-Hybrid-Work?wid=380&hei=213&fit=crop" alt="photo8" class="imgs-carusel">
+                <h3 class="carusel-header">Встречайте гибридный<br> мир</h3>
+                <p class="carusel-p"> 
+                    Попробуйте инструменты, ресурсы и<br>
+                    стратегии, которые помогут вашим <br>
+                    сотрудникам добиться успеха в новом <br>
+                    мире гибкой рабочей среды.
+                </p>
+                <a href="#" class="carusel-b">Подробнее</a>
+                <button class="right-button">&#x27A4;</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="img/footer.png" alt="footer" width="100%" style="padding-top: 6%; margin-bottom: -2%;">
     </div>
 </body>
 </html>
