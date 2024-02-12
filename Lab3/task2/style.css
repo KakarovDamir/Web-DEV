@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #448cff;
+    padding: 40px;
+}
+
+.todo-app h2 {
+    
+    color: #003c9c;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #f5f5f5;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 14px 30px;
+    background: #40be01;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(63, 133, 1);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    font-size: 17px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 3, 8, 0.251);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
+}
+
+ul li input[type="checkbox"] {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+}
+
+ul li.checked {
+    color: #777;
+    background-color: #90da5f47;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('./images/tick.png');
+    left: -30px;
+}
+
+ul li span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #fe7566;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    color: #ff0d00;
+}

@@ -1,0 +1,125 @@
+.body{
+    font-family: sans-serif;
+}
+.header{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+.header-button{
+    background-color: white;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    border-bottom: 1px solid rgb(15, 14, 14);
+}
+.header-button1{
+    background-color: white;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: 700;
+    border-left: 3px solid black;
+    font-size: 105%;
+    
+}
+
+.header-button1:hover {
+    border-bottom: 1px solid rgb(15, 14, 14);
+}
+.lll{
+    margin-left: 1.8%;
+    padding-top: 0.3%;
+}
+.lll-span{
+    padding-top: -5%;
+}
+
+.rrr{
+    margin-left: 32%;
+}
+.xz{
+    text-decoration: none;
+    font-weight: 100;
+}
+.xz:hover {
+ text-decoration: underline;
+}
+
+.xz-button{
+    background-color: #fff;
+    padding: 1px;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.second-header{
+    text-align: center;
+    background-color: rgb(87, 87, 254);
+    padding: 0.5px;
+    margin-top: 1%;
+    color: #fff;
+    width: 100%;
+}
+
+.third-header{
+    text-align: center;
+    background-color: blueviolet;
+    padding: 0.5px;
+    color: #fff;
+    width: 100%;
+}
+
+.third-header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.third-header a:hover{
+    text-decoration: underline;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Рекомендуется для корректного позиционирования */
+    width: 100%;
+  }
+  
+.overlay {
+    font-size: 120%;
+    margin-top: 6.5%;
+    margin-left: 7.8%;
+    position: absolute;
+    font-weight: 300;
+    top: 0;
+    left: 0;
+    color: white; /* Цвет текста */
+    padding: 10px; /* Отступы внутри оверлея */
+}
+.check-button{
+    color: rgb(42, 52, 92);
+    border: none;
+    
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 2%;
+    font-size:85%;
+    font-weight: 500;
+    background-color: white;
+}
+.check-button2{
+    color: white;
+    margin-left: 5%;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 2.5%;
+    font-size:85%;
+    font-weight: 500;
+    background-color: #27507c;
+    border: 2px solid #fff;
+}
