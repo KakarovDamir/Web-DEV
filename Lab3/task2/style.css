@@ -80,7 +80,7 @@ ul li {
     margin-bottom: 10px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 3, 8, 0.251);
+    box-shadow: 0 2px 4px rgba(45, 35, 118, 0.251);
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, background-image 0.3s;
 }
@@ -94,13 +94,13 @@ ul li input[type="checkbox"] {
 ul li::before {
     content: '';
     position: absolute;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    background-image: url(./images/box.png);
     background-size: cover;
     top: 50%;
     transform: translateY(-50%);
-    left: 45px;
+    left: -30px;    
 }
 
 ul li.checked {
@@ -111,7 +111,7 @@ ul li.checked {
 
 ul li.checked::before {
     background-image: url('./images/tick.png');
-    left: -30px;
+    left: -32px;
 }
 
 ul li span {
