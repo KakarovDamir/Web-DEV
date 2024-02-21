@@ -1,0 +1,23 @@
+
+  .image-gallery img {
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .image-gallery button {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #212529;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .image-gallery button:hover {
+    background-color: #e9ecef;
+  }
+  
+  a {
+    margin-right: 10px;
+  }
