@@ -1,0 +1,16 @@
+<h2>Categories</h2>
+<ng-container *ngFor="let productCategory of productCategories">
+    <ng-container *ngIf="isCategoryUnique(productCategory.name)">
+      <h3>
+        <a [title]="productCategory.name + 'list'" [routerLink]="['/products', productCategory.name]">
+          {{ productCategory.name }}
+          <p></p>
+          <img src="{{productCategory.img}}" alt="" width="50%">
+        </a>
+      </h3>
+      <div *ngFor="let product of products">
+        <div *ngIf="product.category === productCategory.name">
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>

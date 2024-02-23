@@ -27,11 +27,11 @@ export class ProductListComponent {
     return `https://t.me/share/url?url=${encodeURIComponent(this.products[productId - 1].href)}`;
   }
 
-  prevImage(product: any) {
+  prevImage(productId: any) {
     this.currentImageIndex = Math.max(this.currentImageIndex - 1, 0);
   }
 
   nextImage(product: any) {
-    this.currentImageIndex = Math.min(this.currentImageIndex + 1, product.images.length - 1);
+    this.currentImageIndex = Math.min(this.currentImageIndex + 1, product.img.length - 1);
   }
 }
