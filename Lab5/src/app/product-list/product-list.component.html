@@ -9,24 +9,26 @@
       </a>
     </h3>
     <div class="image-gallery">
-      <button *ngIf="currentImageIndex > 0"(click)="prevImage(product)" type="button">&#60;</button>
-      <img [src]="product.img[currentImageIndex]" alt="Product Image">
-      <button *ngIf="currentImageIndex < product.img.length - 1" (click)="nextImage(product)" type="button">&#62;</button>
+      <button *ngIf="product.currentImageIndex > 0"(click)="prevImage(product)" type="button">&#60;</button>
+      <img [src]="product.img[product.currentImageIndex]" alt="Product Image">
+      <button *ngIf="product.currentImageIndex < product.img.length - 1" (click)="nextImage(product)" type="button">&#62;</button>
     </div>
     
-
+    <span><button (click)="incrementLikes(product)" *ngIf="!product.liked" style="color: rgb(248, 59, 59);">{{product.like}}♡</button></span>
+    <span><button (click)="incrementLikes(product)" *ngIf="product.liked" style="color: rgb(216, 1, 1);">{{product.like}}❤️</button></span>
     <p *ngIf="product.description">Description: {{ product.description }}</p>
     <p *ngIf="product.description"><b>Rating: {{product.rating}}</b></p>
 
 
-    <a [href]="getWhatsAppShareLink(product.id)" target="_blank"><button type="button" >Share on WhatsApp</button></a>
+    <a [href]="getWhatsAppShareLink(product.href)" target="_blank"><button type="button" >Share on WhatsApp</button></a>
     <p></p>
-    <a [href]="getTelegramShareLink(product.id)" target="_blank"><button type="button">Share on Telegram</button></a>
-    
+    <a [href]="getTelegramShareLink(product.href)" target="_blank"><button type="button">Share on Telegram</button></a>
     <app-product-alerts
       [product]="product" 
       (notify)="onNotify()">
     </app-product-alerts>
+    <button (click)="removeProduct(product) " class="removeButton">Remove</button>
+    <button type="button" (click)="addToCart(product)">Buy</button>
   </div>
 </div>
 </ng-container>

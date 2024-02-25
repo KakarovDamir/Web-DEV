@@ -7,6 +7,9 @@ export interface Product {
     img: string[];
     rating: string;
     category: string;
+    like: number;
+    liked: boolean;
+    currentImageIndex: number;
   }
   
   export const products = [
@@ -22,8 +25,10 @@ export interface Product {
         'https://resources.cdn-kaspi.kz/img/m/p/h3d/h8e/64208874405918.jpg?format=gallery-medium'
       ],
       rating: '4.5',
-      category: 'phone'
-
+      category: 'phone',
+      like: 855,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 2,
@@ -37,7 +42,10 @@ export interface Product {
         'https://resources.cdn-kaspi.kz/img/m/p/h6e/h4f/64400506159134.jpg?format=gallery-medium'
       ],
       rating: '4.6',
-      category: 'phone'
+      category: 'phone',
+      like: 120,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 3,
@@ -50,7 +58,10 @@ export interface Product {
         'https://resources.cdn-kaspi.kz/img/m/p/hcf/h00/83559848247326.png?format=gallery-medium'
       ],
       rating: '4.9',
-      category: 'phone'
+      category: 'phone',
+      like: 500,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 4,
@@ -63,7 +74,10 @@ export interface Product {
     'https://resources.cdn-kaspi.kz/img/m/p/hf8/he3/64082978111518.jpg?format=gallery-medium'
     ],
       rating: '4.7',
-      category: 'laptop'
+      category: 'laptop',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 5,
@@ -76,7 +90,10 @@ export interface Product {
       'https://resources.cdn-kaspi.kz/img/m/p/h56/h5a/64321420034078.jpg?format=gallery-medium'
     ],
       rating: '4.8',
-      category: 'laptop'
+      category: 'laptop',
+      like: 50,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 6,
@@ -89,7 +106,10 @@ export interface Product {
       'https://resources.cdn-kaspi.kz/img/m/p/h52/h28/84526606942238.jpg?format=gallery-medium'
     ],
       rating: '4.7',
-      category: 'laptop'
+      category: 'laptop',
+      like: 200,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 7,
@@ -102,7 +122,10 @@ export interface Product {
           'https://resources.cdn-kaspi.kz/img/m/p/hd3/hb3/64372936474654.jpg?format=gallery-medium'
     ],
       rating: '4.5',
-      category: 'laptop'
+      category: 'laptop',
+      like: 500,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 8,
@@ -115,7 +138,10 @@ export interface Product {
     'https://resources.cdn-kaspi.kz/img/m/p/hbc/h4c/64841487024158.jpg?format=gallery-medium'
     ],
       rating: '4.6',
-      category: 'laptop'
+      category: 'laptop',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 9,
@@ -128,7 +154,10 @@ export interface Product {
         'https://resources.cdn-kaspi.kz/img/m/p/h8c/h96/64332951945246.jpg?format=gallery-medium'
     ],
       rating: '4.8',
-      category: 'tv'
+      category: 'tv',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
     },
     {
       id: 10,
@@ -141,7 +170,175 @@ export interface Product {
       'https://resources.cdn-kaspi.kz/img/m/p/h77/hcd/80564067663902.png?format=gallery-medium'
     ],
       rating: '4.9',
-      category: 'tv'
+      category: 'tv',
+      like: 50,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 11,
+      name: ' Samsung UE32T5300AUXCE',
+      price: 8000,
+      description: 'Изображение с разрешением 19200x1080 (Full HD)',
+      href: 'https://www.sulpak.kz/g/televizoriy_arg_ld40s6500',
+      img: ['https://object.pscloud.io/cms/cms/Photo/img_0_95_2894_0_1_AwVkdW.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_95_2894_0_1_ugmgKH.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_95_2894_0_1_uZcWIP.webp'
+      ],
+      rating: '4.8',
+      category: 'tv',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 12,
+      name: 'Samsung UE32T5300AUXCE',
+      price: 8000,
+      description: 'Диагональ экрана: 32″ - 81,3 см',
+      href: 'https://www.sulpak.kz/g/televizoriy_samsung_ue32t5300auxc',
+      img: ['https://object.pscloud.io/cms/cms/Photo/img_0_95_2283_5_6.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_95_2283_4_6.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_95_2283_3_6.webp'
+      ],
+      rating: '4.8',
+      category: 'tv',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 13,
+      name: 'Haier 32 S1',
+      price: 8000,
+      description: 'Диагональ экрана: 32″ - 81,3 см',
+      href: 'https://www.sulpak.kz/g/televizoriy_haier_32_s1',
+      img: ['https://object.pscloud.io/cms/cms/Photo/img_0_95_2326_0_1.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_95_2326_3_1.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_95_2326_7_1.webp'
+      ],
+      rating: '4.8',
+      category: 'tv',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 14,
+      name: 'Samsung Galaxy S24 Ultra',
+      price: 8000,
+      description: '12/512GB Titanium Black',
+      href: 'https://www.sulpak.kz/g/smartfoniy_samsung_galaxy_s24_ultra_512gb_titanium_black_sm_s928bzkhskz',
+      img: ['https://object.pscloud.io/cms/cms/Photo/img_0_77_5801_0_1_PsA9N6.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_77_5801_0_1_iYja16_160.webp',
+      'https://object.pscloud.io/cms/cms/Photo/img_0_77_5801_0_1_x5mHPy_160.webp'
+      ],
+      rating: '4.8',
+      category: 'phone',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 15,
+      name: ' Samsung Galaxy S24',
+      price: 8000,
+      description: '8/256GB Amber Yellow',
+      href: 'https://www.sulpak.kz/g/smartfoniy_samsung_galaxy_s24_256gb_amber_yellow_sm_s921bzygskz',
+      img: [
+        'https://object.pscloud.io/cms/cms/Photo/img_0_77_5782_0_1_DIMK5t.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_77_5782_0_1_9eCEoB_160.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_77_5782_0_1_Rkpx2i_160.webp'
+      ],
+      rating: '4.9',
+      category: 'phone',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 16,
+      name: 'Phoenix Powerfull Roadster TR19S2003JL-1',
+      price: 8000,
+      description: 'Велосипед для активной езды',
+      href: 'https://www.sulpak.kz/g/podrostkoviyj_velosiped_phoenix_tr19s2003jl_588_292',
+      img: [
+        'https://object.pscloud.io/cms/cms/Photo/img_0_588_292_12_1.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_588_292_4_1_160.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_588_292_11_1.webp'
+      ],
+      rating: '4.7',
+      category: 'sport',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 17,
+      name: 'Phoenix Magic 4.0 Gray',
+      price: 8000,
+      description: 'Велосипед для городской езды',
+      href: 'https://www.sulpak.kz/g/velosiped_gorniyj_magic_4_0_seriyj_588_614',
+      img: [
+        'https://object.pscloud.io/cms/cms/Photo/img_0_588_614_0_1.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_588_614_4_1.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_588_614_13_1.webp'
+      ],
+      rating: '4.8',
+      category: 'sport',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 18,
+      name: 'Крепление на грудь для экшн камеры',
+      price: 150000,
+      description: 'dsfdgh',
+      href: 'https://www.sulpak.kz/g/kreplenie_na_grud_dlya_ekshn_kameriy_gopro_chest_mount_harness_chesty',
+      img: [
+        'https://object.pscloud.io/cms/cms/Photo/img_0_1002_30_0_6.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_1002_30_1_6_160.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_1002_30_4_6_160.webp'
+      ],
+      rating: '4.9',
+      category: 'sport',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 19,
+      name: 'Беговая дорожка Genau iTech R5',
+      price: 150000,
+      description: 'Исключительная технологичность',
+      href: 'https://www.sulpak.kz/g/begoviye_dorozhki_genau_itech_r5',
+      img: [
+        'https://object.pscloud.io/cms/cms/Photo/img_0_1378_90_7_1.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_1378_90_0_1.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_1378_90_1_1.webp'
+      ],
+      rating: '4.9',
+      category: 'sport',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
+    },
+    {
+      id: 20,
+      name: 'Электросамокат Xiaomi',
+      price: 350000,
+      description: '6.7-inch Super Retina XDR display, A16 Bionic chip, Pro camera system',
+      href: 'https://www.sulpak.kz/g/elektrosamokat_xiaomi_mijia_smart_electric_scooter_pro_2_4025gl_cherniyj_770_71',
+      img: [
+        'https://object.pscloud.io/cms/cms/Photo/img_0_770_71_0_1.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_770_71_1_1_160.webp',
+        'https://object.pscloud.io/cms/cms/Photo/img_0_770_71_2_1.webp'
+      ],
+      rating: '4.9',
+      category: 'sport',
+      like: 100,
+      liked: false,
+      currentImageIndex: 0,
     }
-
   ];

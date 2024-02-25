@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
+
 
 import { Product, products } from '../products';
 
@@ -12,15 +14,15 @@ export class ProductListComponent implements OnInit {
   
   products: Product[] = [];
   productCategoryFromRoute!: string;
-  currentImageIndex = 0;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+    private cartService: CartService
+    ) { }
 
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     this.productCategoryFromRoute = String(routeParams.get('productCategory')).toLowerCase();
   
-    // Find all products that correspond with the category provided in route.
     this.products = products.filter(product => {
       const match = product.category.toLowerCase() === this.productCategoryFromRoute;
       if (!match) {
@@ -34,19 +36,38 @@ export class ProductListComponent implements OnInit {
     window.alert('You will be notified when the product goes on sale');
   }
 
-  getWhatsAppShareLink(productId: number) {
-    return `https://api.whatsapp.com/send?text=${encodeURIComponent(this.products[productId - 1].href)}`;
+  getWhatsAppShareLink(productHref: string) {
+    return `https://api.whatsapp.com/send?text=${encodeURIComponent(productHref)}`;
   } 
 
-  getTelegramShareLink(productId: number) {
-    return `https://t.me/share/url?url=${encodeURIComponent(this.products[productId - 1].href)}`;
+  getTelegramShareLink(productHref: string) {
+    return `https://t.me/share/url?url=${encodeURIComponent(productHref)}`;
   }
 
-  prevImage(productId: any) {
-    this.currentImageIndex = Math.max(this.currentImageIndex - 1, 0);
+  prevImage(product: Product) {
+    product.currentImageIndex = Math.max(product.currentImageIndex - 1, 0);
   }
 
-  nextImage(product: any) {
-    this.currentImageIndex = Math.min(this.currentImageIndex + 1, product.img.length - 1);
+  nextImage(product: Product) {
+    product.currentImageIndex = Math.min(product.currentImageIndex + 1, product.img.length - 1);
   }
+
+  incrementLikes(product: Product) {
+    if (!product.liked) {
+      product.like += 1;
+      product.liked = true;
+    }else{
+      product.like -= 1;
+      product.liked = false;
+    }
+  }
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
+}
+ 
+  removeProduct(product: Product) {
+    this.products = this.products.filter(p => p !== product);
+  }
+
 }
