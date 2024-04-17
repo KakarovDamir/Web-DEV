@@ -30,6 +30,15 @@ export class ProductListComponent implements OnInit {
       }
       return match;
     });
+    this.getNews();
+  }
+
+  getNews(){
+    this.cartService.getNews().subscribe(
+      data => {
+        console.log(data);
+      }
+    )
   }
 
   onNotify() {
